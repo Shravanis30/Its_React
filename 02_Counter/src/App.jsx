@@ -10,6 +10,9 @@ function App() {
   const addValue = () => {
     if(counter>0)
     setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1);
+    setCounter(counter + 1); 
     console.log('clicked', counter)
 
   }
