@@ -39,6 +39,7 @@ function App() {
 
   return (
 
+    <div className="bg-slate-900 w-full h-screen">
     <div className="w-full max-w-xl mx-auto rounded-lg p-2 my-14 text-orange-500 bg-slate-700">
 
       <h1 className="text-white text-4xl text-center my-5">Password Generator</h1>
@@ -96,6 +97,7 @@ function App() {
         </div>
 
       </div>
+    </div>
     </div>
   )
 }
