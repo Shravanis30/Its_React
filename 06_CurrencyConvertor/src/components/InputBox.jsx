@@ -1,4 +1,4 @@
-import {useId} from 'react'
+import React, {useId} from 'react'
 // do not call useId to generate keys in list
 
 function InputBox({
@@ -27,7 +27,7 @@ function InputBox({
                     className='outline-none w-full bg-transparent py-1.5'
                     type='number'
                     placeholder='Amount'
-                    disabled={amount}
+                    disabled={amountDisable}
                     value={amount}
                     onChange={(event) => onAmountChange && onAmountChange(Number(event.target.value))}
                 />
@@ -44,7 +44,7 @@ function InputBox({
                     >
                         {/* Remember the "keys" in loops in react */}
                     {currencyOptions.map((currency) => (
-                        <option key={currency} value="usd">
+                        <option key={currency} value={currency}>
                             {currency}
                         </option>
                     ))}
