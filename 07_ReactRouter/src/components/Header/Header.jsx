@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 // link is used instend of "a" tag(it reloads the page which makes react useless) bcoz in react the page shouldnt refershes so Link is used 
 
