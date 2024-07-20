@@ -14,7 +14,7 @@ function App() {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
-    if (NumberAllowed) str += "0987654321"
+    if (NumberAllowed == true) str += "0987654321"
     if (CharAllowed) str += "!@#$%^&*()_+=-{}[]|~`?/"
 
     for (let i = 0; i < length; i++) {
@@ -24,7 +24,7 @@ function App() {
 
     SetPassword(pass)
 
-  }, [length, NumberAllowed, CharAllowed])
+  }, [length, NumberAllowed, CharAllowed])  // dependencies are passed here so that the it can be used to call back 
 
   const copyPasswordToClipbord = useCallback(() => {
     passwordRef.current?.select();

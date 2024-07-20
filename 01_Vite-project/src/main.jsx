@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { Children } from 'react'
+import Food from './function.jsx'
 
 function MyApp() {
   return (
@@ -42,5 +43,6 @@ const ReactElement = React.createElement(
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     {ReactElement}
+    {Food}
   </>
 )
