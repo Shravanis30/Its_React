@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 function App() {
 
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState()
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
@@ -79,7 +79,7 @@ function App() {
             <button
               type='submit'
               className='w-full bg-blue-600 text-white px-4 py-3 rounded-lg'>
-              convert {from.toUpperCase()} to ${to.toUpperCase()}
+              convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
           </from>
         </div>
