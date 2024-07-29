@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
-import authService from './appwrite/auth'
-import { login, logout } from './store/authSlice'
-import { Header, Footer } from './components'
+import authService from "./appwrite/auth"
+import { login, logout } from "./store/authSlice"
+import { Footer, Header } from './components/index.js'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
   // console.log(import.meta.env.VITE_APPWRITE_URL);
   // it is printed twice because react is in strict mode so it goes into production
 
-  const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
 
 
   useEffect(() => {
@@ -33,12 +34,12 @@ function App() {
       <div className='w-full block'>
         <Header />
         <main>
-        TODO:  {/* <Outlet /> */}
+          TODO:  <Outlet />
         </main>
         <Footer />
       </div>
     </div>
-  ) : null 
+  ) : null
 }
 
 export default App
